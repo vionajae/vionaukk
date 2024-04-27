@@ -54,11 +54,11 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+            <a href="{{url('dashboard')}}" class="app-brand-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
               </svg>
-              <span class="app-brand-text demo menu-text fw-bold ms-2">app kasir</span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2">s mart</span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -84,7 +84,7 @@
                 class="menu-link" 
                 role="button">
                 <i class="menu-icon tf-icons bx bx-id-card "></i>
-                <div data-i18n="Chat">Data Admin</div>
+                <div data-i18n="Chat">Data Admin Petugas</div>
               </a>
             </li>
             <li class="menu-item">
@@ -174,6 +174,59 @@
           <div class="content-wrapper">
             <!-- Content -->
 
+            <div class="container-xxl flex-grow-1 container-p-y">
+                <div class="col-lg-9 col-md-9 order-1">
+                    <!-- Order Statistics -->
+  <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+    <div class="card h-100">
+      <div class="card-header d-flex align-items-center justify-content-between pb-0">
+        <div class="card-title mb-0">
+          <h5 class="m-0 me-2">Total Order </h5>
+          <small class="text-muted">42.82k Total Terjual</small>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="d-flex flex-column align-items-center gap-1">
+          </div>
+          <div id="orderStatusticsCharts"></div>
+        </div>
+        <ul class="p-0 m-0">
+          <li class="d-flex mb-4 pb-1">
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-primary"><i class='bx bx-food-menu'></i></span>
+            </div>
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+              <div class="me-2">
+                <h6 class="mb-0">Food</h6>
+                <small class="text-muted">Chitato, Beng Beng, Oat, dll</small>
+              </div>
+              <div class="user-progress">
+                <small class="fw-medium">82.5k</small>
+              </div>
+            </div>
+          </li>
+          <li class="d-flex">
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-secondary"><i class='bx bx-drink'></i></span>
+            </div>
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+              <div class="me-2">
+                <h6 class="mb-0">Drink</h6>
+                <small class="text-muted">Ultramilk, Le Mineral, Aqua, dll</small>
+              </div>
+              <div class="user-progress">
+                <small class="fw-medium">91.9k</small>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+              </div>
+            </div>
            
             
     <!-- Core JS -->

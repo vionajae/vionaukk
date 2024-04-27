@@ -25,7 +25,7 @@ class AdminController extends Controller
             session(['admin'=>$petugas]);
          return redirect('dashboard');
         }
-        return back()->with('pesan','Username dan Password belum terdaftar kakak');
+        return back()->with('pesan','Username dan Password Salah');
     } 
     public function logoutt(){
         session()->flush();
@@ -196,13 +196,14 @@ class AdminController extends Controller
     }
 
     public function cektransaksi(Request $request){
-        $a = new DetailPenjualan();
-        $a->create([
-            'PenjualanID'=> $request->PenjualanID,
-            'ProdukID'=> $request->ProdukID,
-            'JumlahProduk'=> $request->JumlahProduk,
-            'Subtotal'=> $request->Subtotal
-        ]);
+        $a = new Penjualan();
+        $cek = $request->validate(([
+            'PenjualanID'=>'required',
+            'TanggalPenjualan'=>'required',
+            'TotalHarga'=>'required',
+            'PelangganID'=>'required'
+        ]));
+        return redirect('transaksi');
     }
 
 

@@ -12,7 +12,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Edit Produk</title>
+    <title>Tambah Produk</title>
 
     <meta name="description" content="" />
 
@@ -87,7 +87,7 @@
                 <div data-i18n="Chat">Data Admin Petugas</div>
               </a>
             </li>
-            <li class="menu-item active open">
+            <li class="menu-item">
               <a
                 href="{{url('produk')}}"
                 role="button"
@@ -105,7 +105,7 @@
                 <div data-i18n="Chat">Data Pelanggan </div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a
                   href="{{url('transaksi')}}"
                   role="button"
@@ -178,34 +178,34 @@
               <div class="row">
                 <!-- Basic Layout -->
                 
-                <form action="{{url('editproduk/'.$data->ProdukID)}}" method="post">
+                <form action="{{url('transaksi2')}}" method="post">
                   @csrf
                 <div class="col-xxl">
                   <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="mb-0">Edit Produk</h5>
+                      <h5 class="mb-0">Transaksi</h5>
                     </div>
                     <div class="card-body">
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Nama Produk</label>
+                          <label class="col-sm-2 col-form-label" for="basic-default-name">Tanggal Penjualan</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" name="NamaProduk" value="{{$data->NamaProduk}}" placeholder="Nama Produk" />
+                            <input type="text" class="form-control" name="TanggalPenjualan" id="TanggalPenjualan" placeholder="Tanggal Penjualan" />
                           </div>
                         </div>
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Harga</label>
+                          <label class="col-sm-2 col-form-label" for="basic-default-name">Total Harga</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" name="Harga" value="{{$data->Harga}}" placeholder="Harga" />
+                            <input type="text" class="form-control" name="TotalHarga" id="TotalHarga" placeholder="Total Harga" />
                           </div>
                         </div>
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Stok</label>
+                          <label class="col-sm-2 col-form-label" for="basic-default-name">Pelanggan ID</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" name="Stok" value="{{$data->Stok}}" placeholder="Stok" />
+                            <input type="text" class="form-control" name="PelangganID" id="PelangganID" placeholder="Pelanggan ID" />
                           </div>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary w-100" type="submit">Edit</button>
+                            <button class="btn btn-primary w-100" type="submit">Transaksi</button>
                           </div>
                           <div class="mb-3">
                             <button class="btn btn-primary w-100" type="reset">Batal</button>

@@ -68,13 +68,7 @@
                     <div class="alert alert-danger" role="alert">
                         {{session('pesan')}}
                       </div>
-                    @endif
-                    {{-- pesan jika validasi gagal --}}
-                    @if ($errors->any())
-                    <div class="alert alert-success" role="alert">
-                        Gagal registrasi
-                      </div>
-                    @endif
+                @endif
                 <div class="mb-3">
                   <label for="username" class="form-label">Username</label>
                   <input type="text" class="form-control" id="Username" name="Username" placeholder="Username" autofocus />

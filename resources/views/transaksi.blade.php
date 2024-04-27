@@ -51,11 +51,11 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+            <a href="{{url('dashboard')}}" class="app-brand-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
               </svg>
-              <span class="app-brand-text demo menu-text fw-bold ms-2">app kasir</span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2">s mart</span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -81,7 +81,7 @@
                 role="button"
                 class="menu-link">
                 <i class="menu-icon tf-icons bx bx-id-card "></i>
-                <div data-i18n="Chat">Data Admin</div>
+                <div data-i18n="Chat">Data Admin Petugas</div>
               </a>
             </li>
             <li class="menu-item">
@@ -115,7 +115,6 @@
 
         <!-- Layout container -->
         <div class="layout-page">
-          <!-- Navbar -->
 
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
@@ -128,16 +127,7 @@
 
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search fs-4 lh-0"></i>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none ps-1 ps-sm-2"
-                    placeholder="Search..."
-                    aria-label="Search..." />
-                </div>
-              </div>
+              
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -183,37 +173,43 @@
                       <h5 class="mb-0">Transaksi</h5>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Penjualan ID </label>
-                          <div class="col-sm-10">
-                            <input type="number" class="form-control" name="PenjualanID" id="PenjualanID" placeholder="Penjualan ID " />
-                          </div>
+                      <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                          <label for="" class="col-form-label">Penjualan ID</label>
                         </div>
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Produk ID</label>
-                          <div class="col-sm-10">
-                            <input type="number" class="form-control" name="ProdukID" id="ProdukID" placeholder="Produk ID" />
-                          </div>
+                        <div class="col-auto col-3">
+                          <input type="number" id="inputPenjualanID" class="form-control" placeholder="Penjualan ID">
                         </div>
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Jumlah Produk</label>
-                          <div class="col-sm-10">
-                            <input type="number" class="form-control" name="JumlahProduk" id="JumlahProduk" placeholder="Jumlah Produk" />
-                          </div>
+                        <div class="col-auto">
+                          <button class="btn btn-primary w-100"href="{{url('transaksi2')}}"  role="button">Transaksi</button>
+                          </span>
                         </div>
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-name">Subtotal</label>
-                          <div class="col-sm-10">
-                            <input type="number" class="form-control" name="Subtotal" id="Subtotal" placeholder=" Subtotal" />
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                            <button class="btn btn-primary w-100" type="submit">Transaksi</button>
-                          </div>
-                          <div class="mb-3">
-                            <button class="btn btn-primary w-100" type="reset">Batal</button>
-                          </div>
+                      </div>
                       </form>
+                      <div class="card-body">
+                        <div class="table-responsive text-nowrap">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Detail ID</th>
+                                <th>Penjualan ID</th>
+                                <th>Produk ID</th>
+                                <th>Jumlah Produk</th>
+                                <th>Subtotal</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>etytuyi</td>
+                                  <td>etytuyi</td>
+                                  <td>etytuyi</td>
+                                  <td>etytuyi</td>
+                                  <td>etytuyi</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

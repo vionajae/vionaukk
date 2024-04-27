@@ -54,11 +54,11 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+            <a href="{{url('dashboard')}}" class="app-brand-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
               </svg>
-              <span class="app-brand-text demo menu-text fw-bold ms-2">app kasir</span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2">s mart</span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -84,7 +84,7 @@
                 role="button"
                 class="menu-link">
                 <i class="menu-icon tf-icons bx bx-id-card "></i>
-                <div data-i18n="Chat">Data Admin</div>
+                <div data-i18n="Chat">Data Admin Petugas</div>
               </a>
             </li>
             <li class="menu-item">
@@ -183,37 +183,62 @@
                 <div class="col-xxl">
                   <div class="card mb-4">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="mb-0">Tambah Admin</h5>
+                      <h5 class="mb-0">Registrasi Admin dan Petugas</h5>
                     </div>
                     <div class="card-body">
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Nama Lengkap</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" name="NamaLengkap" id="NamaLengkap" placeholder="Nama Lengkap" />
+                            @error('NamaLengkap')
+                          <div class="form-text">
+                              {{$message}}
+                          </div>
+                      @enderror
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Alamat</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" name="Alamat" id="Alamat" placeholder="Alamat" />
+                            @error('Alamat')
+                          <div class="form-text">
+                              {{$message}}
+                          </div>
+                      @enderror
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Telepon</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" name="Telepon" id="Telepon" placeholder="Telepon" />
+                            @error('Telepon')
+                          <div class="form-text">
+                              {{$message}}
+                          </div>
+                      @enderror
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Username</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" name="Username" id="Username" placeholder="Username"/>
+                            @error('Username')
+                          <div class="form-text">
+                              {{$message}}
+                          </div>
+                      @enderror
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Password</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" name="Password" id="Password" placeholder="Password" />
+                            @error('Password')
+                          <div class="form-text">
+                              {{$message}}
+                          </div>
+                      @enderror
                           </div>
                         </div>
                         <div class="mb-3 row">
